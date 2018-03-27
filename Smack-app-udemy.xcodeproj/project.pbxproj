@@ -13,6 +13,7 @@
 		C81CF5DA20691B90006DE707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5D820691B90006DE707 /* Main.storyboard */; };
 		C81CF5DC20691B90006DE707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5DB20691B90006DE707 /* Assets.xcassets */; };
 		C81CF5DF20691B90006DE707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5DD20691B90006DE707 /* LaunchScreen.storyboard */; };
+		C81CF626206A8D33006DE707 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CF625206A8D33006DE707 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		C81CF5DB20691B90006DE707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C81CF5DE20691B90006DE707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C81CF5E020691B90006DE707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C81CF623206A8D32006DE707 /* Smack-app-udemy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-app-udemy-Bridging-Header.h"; sourceTree = "<group>"; };
+		C81CF624206A8D33006DE707 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C81CF625206A8D33006DE707 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		C81CF5C820691B90006DE707 = {
 			isa = PBXGroup;
 			children = (
+				C81CF622206A8D05006DE707 /* Supporting files */,
 				C81CF5D320691B90006DE707 /* Smack-app-udemy */,
 				C81CF5D220691B90006DE707 /* Products */,
 				E343DDD8F046EA427A01EA3D /* Pods */,
@@ -77,6 +82,16 @@
 				C81CF5E020691B90006DE707 /* Info.plist */,
 			);
 			path = "Smack-app-udemy";
+			sourceTree = "<group>";
+		};
+		C81CF622206A8D05006DE707 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				C81CF624206A8D33006DE707 /* SWRevealViewController.h */,
+				C81CF625206A8D33006DE707 /* SWRevealViewController.m */,
+				C81CF623206A8D32006DE707 /* Smack-app-udemy-Bridging-Header.h */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		E343DDD8F046EA427A01EA3D /* Pods */ = {
@@ -123,6 +138,7 @@
 				TargetAttributes = {
 					C81CF5D020691B90006DE707 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -225,6 +241,7 @@
 			files = (
 				C81CF5D720691B90006DE707 /* ViewController.swift in Sources */,
 				C81CF5D520691B90006DE707 /* AppDelegate.swift in Sources */,
+				C81CF626206A8D33006DE707 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,12 +379,15 @@
 			baseConfigurationReference = A30B05CD853205F568F903FB /* Pods-Smack-app-udemy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
 				INFOPLIST_FILE = "Smack-app-udemy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RFMisnikov.Smack-app-udemy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting files/Smack-app-udemy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -378,12 +398,14 @@
 			baseConfigurationReference = 3A04A39227E50BEC211AA443 /* Pods-Smack-app-udemy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
 				INFOPLIST_FILE = "Smack-app-udemy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RFMisnikov.Smack-app-udemy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting files/Smack-app-udemy-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
