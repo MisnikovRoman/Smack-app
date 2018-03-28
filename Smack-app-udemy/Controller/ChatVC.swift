@@ -16,7 +16,9 @@ class ChatVC: UIViewController {
         super.viewDidLoad()
         // manually add action to button
         menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-         
+        // this methods is in SWReveal files:
+        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
     }
 }
 

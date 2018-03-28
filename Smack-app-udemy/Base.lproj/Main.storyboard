@@ -37,8 +37,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-cn-B3c">
-                                <rect key="frame" x="75" y="303.5" width="225" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Сходи к Свиридону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-cn-B3c">
+                                <rect key="frame" x="40" y="239" width="319" height="189"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Icb-cn-B3c" firstAttribute="centerY" secondItem="Iu5-xb-4ov" secondAttribute="centerY" id="MGv-2k-o2J"/>
-                            <constraint firstItem="Icb-cn-B3c" firstAttribute="centerX" secondItem="Iu5-xb-4ov" secondAttribute="centerX" id="cRY-Kz-B9o"/>
+                            <constraint firstItem="Icb-cn-B3c" firstAttribute="centerX" secondItem="Iu5-xb-4ov" secondAttribute="centerX" constant="12" id="cRY-Kz-B9o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gd8-8X-2ge"/>
                     </view>
