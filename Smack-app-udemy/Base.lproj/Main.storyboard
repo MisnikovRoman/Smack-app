@@ -33,12 +33,12 @@
         <scene sceneID="0nU-0H-XFa">
             <objects>
                 <viewController id="M3w-jQ-c2H" customClass="ChannelVC" customModule="Smack_app_udemy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Iu5-xb-4ov">
+                    <view key="view" contentMode="scaleToFill" id="Iu5-xb-4ov" customClass="GradientView" customModule="Smack_app_udemy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Сходи к Свиридону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-cn-B3c">
-                                <rect key="frame" x="40" y="239" width="319" height="189"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side menu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-cn-B3c">
+                                <rect key="frame" x="75" y="84" width="225" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -46,10 +46,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Icb-cn-B3c" firstAttribute="centerY" secondItem="Iu5-xb-4ov" secondAttribute="centerY" id="MGv-2k-o2J"/>
-                            <constraint firstItem="Icb-cn-B3c" firstAttribute="centerX" secondItem="Iu5-xb-4ov" secondAttribute="centerX" constant="12" id="cRY-Kz-B9o"/>
+                            <constraint firstItem="Icb-cn-B3c" firstAttribute="centerY" secondItem="Iu5-xb-4ov" secondAttribute="centerY" constant="-219.5" id="MGv-2k-o2J"/>
+                            <constraint firstItem="Icb-cn-B3c" firstAttribute="centerX" secondItem="Iu5-xb-4ov" secondAttribute="centerX" id="cRY-Kz-B9o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gd8-8X-2ge"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="1" green="0.65425864193055561" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.82828776041666663" green="0.023317615216666681" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyo-ej-8wK" userLabel="First Responder" sceneMemberID="firstResponder"/>
