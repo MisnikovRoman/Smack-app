@@ -11,12 +11,12 @@
 		C81CF5D520691B90006DE707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CF5D420691B90006DE707 /* AppDelegate.swift */; };
 		C81CF5D720691B90006DE707 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CF5D620691B90006DE707 /* ViewController.swift */; };
 		C81CF5DA20691B90006DE707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5D820691B90006DE707 /* Main.storyboard */; };
-		C81CF5DC20691B90006DE707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5DB20691B90006DE707 /* Assets.xcassets */; };
 		C81CF5DF20691B90006DE707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5DD20691B90006DE707 /* LaunchScreen.storyboard */; };
 		C820DB06206E2D5200E98F4C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C820DB05206E2D5200E98F4C /* LoginVC.swift */; };
 		C86621F1206B89870011F669 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86621F0206B89870011F669 /* SWRevealViewController.m */; };
 		C8676059206BCCE000256E52 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8676058206BCCE000256E52 /* GradientView.swift */; };
 		C8883B04206D26ED00933F57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8883B03206D26ED00933F57 /* Constants.swift */; };
+		C8913E5420764F7A00ACB737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8913E5320764F7900ACB737 /* Assets.xcassets */; };
 		C89D4476206B8010004AD1EF /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4475206B8010004AD1EF /* ChatVC.swift */; };
 		C89D4478206B8022004AD1EF /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4477206B8022004AD1EF /* ChannelVC.swift */; };
 		C8FE9F2E20721353003B2C41 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */; };
@@ -30,7 +30,6 @@
 		C81CF5D420691B90006DE707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C81CF5D620691B90006DE707 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C81CF5D920691B90006DE707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C81CF5DB20691B90006DE707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C81CF5DE20691B90006DE707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C81CF5E020691B90006DE707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C820DB05206E2D5200E98F4C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		C86621F0206B89870011F669 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C8676058206BCCE000256E52 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C8883B03206D26ED00933F57 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C8913E5320764F7900ACB737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C89D4475206B8010004AD1EF /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C89D4477206B8022004AD1EF /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 				C89D4472206B7F66004AD1EF /* Controller */,
 				C81CF5D420691B90006DE707 /* AppDelegate.swift */,
 				C81CF5D620691B90006DE707 /* ViewController.swift */,
+				C8913E5320764F7900ACB737 /* Assets.xcassets */,
 				C81CF5D820691B90006DE707 /* Main.storyboard */,
-				C81CF5DB20691B90006DE707 /* Assets.xcassets */,
 				C81CF5DD20691B90006DE707 /* LaunchScreen.storyboard */,
 				C81CF5E020691B90006DE707 /* Info.plist */,
 			);
@@ -215,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C81CF5DF20691B90006DE707 /* LaunchScreen.storyboard in Resources */,
-				C81CF5DC20691B90006DE707 /* Assets.xcassets in Resources */,
+				C8913E5420764F7A00ACB737 /* Assets.xcassets in Resources */,
 				C81CF5DA20691B90006DE707 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

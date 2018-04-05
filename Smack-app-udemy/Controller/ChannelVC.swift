@@ -23,4 +23,9 @@ class ChannelVC: UIViewController {
         performSegue(withIdentifier: TO_LOGIN, sender: nil)
     }
     
+    // our custom func for exit from 'Create account VC' to this ('Channel VC')
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        
+    }
+    
 }

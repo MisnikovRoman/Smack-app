@@ -13,4 +13,12 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func backToLoginBtnPressed(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func backToMainBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
+    }
 }
