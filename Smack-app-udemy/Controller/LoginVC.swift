@@ -13,6 +13,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var createAccountBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,4 +26,10 @@ class LoginVC: UIViewController {
     @IBAction func closeVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func createAccountPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
+    }
+    
+    
 }

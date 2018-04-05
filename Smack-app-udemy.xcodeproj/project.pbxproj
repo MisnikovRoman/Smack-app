@@ -19,6 +19,7 @@
 		C8883B04206D26ED00933F57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8883B03206D26ED00933F57 /* Constants.swift */; };
 		C89D4476206B8010004AD1EF /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4475206B8010004AD1EF /* ChatVC.swift */; };
 		C89D4478206B8022004AD1EF /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4477206B8022004AD1EF /* ChannelVC.swift */; };
+		C8FE9F2E20721353003B2C41 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		C8883B03206D26ED00933F57 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C89D4475206B8010004AD1EF /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C89D4477206B8022004AD1EF /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				C89D4475206B8010004AD1EF /* ChatVC.swift */,
 				C89D4477206B8022004AD1EF /* ChannelVC.swift */,
 				C820DB05206E2D5200E98F4C /* LoginVC.swift */,
+				C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				C820DB06206E2D5200E98F4C /* LoginVC.swift in Sources */,
 				C8676059206BCCE000256E52 /* GradientView.swift in Sources */,
 				C86621F1206B89870011F669 /* SWRevealViewController.m in Sources */,
+				C8FE9F2E20721353003B2C41 /* CreateAccountVC.swift in Sources */,
 				C8883B04206D26ED00933F57 /* Constants.swift in Sources */,
 				C81CF5D520691B90006DE707 /* AppDelegate.swift in Sources */,
 				C89D4478206B8022004AD1EF /* ChannelVC.swift in Sources */,
