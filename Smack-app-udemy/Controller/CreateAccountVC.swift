@@ -10,12 +10,41 @@ import UIKit
 
 class CreateAccountVC: UIViewController {
     
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var userImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func backToLoginBtnPressed(_ sender: Any) {
+    @IBAction func createAccountPressed(_ sender: Any) {
+        // check that data in email textField is not nil and blank ("")
+        guard let email = loginTextField.text, loginTextField.text != "" else { return }
+        // chech data in password textField
+        guard let pass = passwordTextField.text, passwordTextField.text != "" else { return }
         
+        AuthService.instance.registerUser(email: email, password: pass) { (success) in
+            
+            // in Authservice.swift we wrote that if there are no errors -> closure BOOL is true
+            if success {
+                print("Registered user")
+            }
+        }
+        
+        
+        
+        
+    }
+    
+    @IBAction func pickAvatarPressed(_ sender: Any) {
+    }
+    
+    @IBAction func pickBGColorPressed(_ sender: Any) {
+    }
+    
+    @IBAction func backToLoginBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func backToMainBtnPressed(_ sender: Any) {
