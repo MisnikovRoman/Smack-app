@@ -36,6 +36,8 @@ class CreateAccountVC: UIViewController {
                     // if completion closure is true in func loginUser
                     if success {
                         print("User logged in, token: (\(AuthService.instance.authToken))")
+                        simpleAlert(title: "Поздравляем", message: "Пользователь с email \(AuthService.instance.userEmail) был успешно создан, полученный токен: \(AuthService.instance.authToken)", buttonText: "Далее", vc: self)
+                        // ⁉️ - после вызова UIAlertView необходимо сделать переход на другое окно
                     }
                 }
             }
