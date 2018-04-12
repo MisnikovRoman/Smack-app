@@ -30,6 +30,14 @@ class CreateAccountVC: UIViewController {
             // in Authservice.swift we wrote that if there are no errors -> closure BOOL is true
             if success {
                 print("Registered user")
+                
+                // next step - login user
+                AuthService.instance.loginUser(email: email, password: pass) { (success) in
+                    // if completion closure is true in func loginUser
+                    if success {
+                        print("User logged in, token: (\(AuthService.instance.authToken))")
+                    }
+                }
             }
         }
         

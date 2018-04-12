@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 // This file will handle this functions:
 // 1. Log in
@@ -60,18 +61,13 @@ class AuthService {
         // make all letters in email string low
         let lowerCaseEmail = email.lowercased()
         
-        // json object which will be transmitted with request
-        let header = [
-            "Content-Type": "application/json; charset=utf-8"
-        ]
-        
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password": password
         ]
         
         // use Alamofire library for URL request and take response as String. Success: "Successfully created new account"
-        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
             if response.result.error == nil {
                 completion(true)
             } else {
@@ -79,6 +75,77 @@ class AuthService {
                 debugPrint(response.result.error as Any)
             }
         }
+    }
+    
+    func loginUser (email: String, password: String, completion: @escaping CompletionHandler) {
+     
+        // make all letters in email string low
+        let lowerCaseEmail = email.lowercased()
+        
+        let body: [String: Any] = [
+            "email": lowerCaseEmail,
+            "password": password
+        ]
+        
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+            if response.result.error == nil {
+                
+                // OLD WAY: try convert received data to dictionary
+//                if let json = response.result.value as? Dictionary<String, Any> {
+//                    if let email = json["user"] as? String {
+//                        // write User Database with new email
+//                        self.userEmail = email
+//                    }
+//
+//                    if let token = json["token"] as? String {
+//                        // safe token data
+//                        self.authToken = token
+//                    }
+//                }
+                
+                // NEW WAY try to convert received data to dictionary:
+                // safaly get received data
+                guard let data = response.data else { return }
+                
+                do {
+                    let json = try JSON(data: data)
+                    // next line automatically safelly unwrap json data
+                    // *if there is no data in JSON - it will be ""
+                    let email = json["user"].stringValue
+                    let authToken = json["token"].stringValue
+                    self.userEmail = email
+                    self.authToken = authToken
+                    
+                } catch _ {
+                    print("Error in log in")
+                }
+                
+                
+                self.isLoggedIn = true
+                
+                completion(true)
+                
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     }
+    
+    
 }
