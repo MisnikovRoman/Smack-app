@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D011F21E293DD875F30C49F7307409B3"
+               BlueprintIdentifier = "1A96137E58369A8D355C642F9B8D0F9F"
                BuildableName = "Pods_Smack_app_udemy.framework"
                BlueprintName = "Pods-Smack-app-udemy"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D011F21E293DD875F30C49F7307409B3"
+            BlueprintIdentifier = "1A96137E58369A8D355C642F9B8D0F9F"
             BuildableName = "Pods_Smack_app_udemy.framework"
             BlueprintName = "Pods-Smack-app-udemy"
             ReferencedContainer = "container:Pods.xcodeproj">

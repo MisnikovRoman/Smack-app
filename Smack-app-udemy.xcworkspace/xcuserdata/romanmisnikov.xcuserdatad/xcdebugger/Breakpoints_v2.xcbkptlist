@@ -10,11 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Smack-app-udemy/Controller/CreateAccountVC.swift"
-            timestampString = "545210541.973013"
+            timestampString = "545214338.028417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63">
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "CreateAccountVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

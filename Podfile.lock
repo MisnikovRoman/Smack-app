@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.0)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - Socket.IO-Client-Swift (13.1.2):
     - Starscream (~> 3.0.2)
   - Starscream (3.0.4)
@@ -7,15 +10,17 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - NVActivityIndicatorView
   - Socket.IO-Client-Swift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   Socket.IO-Client-Swift: 010d2f464bdd1849b859c0cd0500d68194401ac8
   Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 36a2d4e8f8664aaae14c40f8e4ad0751233b8414
+PODFILE CHECKSUM: 971e04fbfb9635e8ead52761d1ffabf08a130aff
 
 COCOAPODS: 1.4.0

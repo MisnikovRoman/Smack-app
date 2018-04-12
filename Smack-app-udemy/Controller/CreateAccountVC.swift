@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class CreateAccountVC: UIViewController {
+class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
@@ -25,6 +26,10 @@ class CreateAccountVC: UIViewController {
         // chech data in password textField
         guard let pass = passwordTextField.text, passwordTextField.text != "" else { return }
         
+        // run activity indicator
+        startAnimating(message: "Подождите, идет обмен данными с сервером")
+        
+        // make request
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             
             // in Authservice.swift we wrote that if there are no errors -> closure BOOL is true
@@ -35,9 +40,13 @@ class CreateAccountVC: UIViewController {
                 AuthService.instance.loginUser(email: email, password: pass) { (success) in
                     // if completion closure is true in func loginUser
                     if success {
+                        self.stopAnimating()
                         print("User logged in, token: (\(AuthService.instance.authToken))")
                         simpleAlert(title: "Поздравляем", message: "Пользователь с email \(AuthService.instance.userEmail) был успешно создан, полученный токен: \(AuthService.instance.authToken)", buttonText: "Далее", vc: self)
                         // ⁉️ - после вызова UIAlertView необходимо сделать переход на другое окно
+                    } else {
+                        self.stopAnimating()
+                        print("Error at login")
                     }
                 }
             }
