@@ -15,6 +15,7 @@
 		C81D1781207E31460039B9DC /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D1780207E31460039B9DC /* RoundedButton.swift */; };
 		C820DB06206E2D5200E98F4C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C820DB05206E2D5200E98F4C /* LoginVC.swift */; };
 		C84F3341207F3FBE003739A3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84F3340207F3FBE003739A3 /* Alert.swift */; };
+		C84F3361207F5915003739A3 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84F3360207F5915003739A3 /* UserDataService.swift */; };
 		C85A853B207DFC6A00D02E7E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85A853A207DFC6A00D02E7E /* AuthService.swift */; };
 		C86621F1206B89870011F669 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86621F0206B89870011F669 /* SWRevealViewController.m */; };
 		C8676059206BCCE000256E52 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8676058206BCCE000256E52 /* GradientView.swift */; };
@@ -38,6 +39,7 @@
 		C81D1780207E31460039B9DC /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C820DB05206E2D5200E98F4C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C84F3340207F3FBE003739A3 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C84F3360207F5915003739A3 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		C85A853A207DFC6A00D02E7E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C86621EF206B89870011F669 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C86621F0206B89870011F669 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				C85A853A207DFC6A00D02E7E /* AuthService.swift */,
+				C84F3360207F5915003739A3 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C89D4476206B8010004AD1EF /* ChatVC.swift in Sources */,
+				C84F3361207F5915003739A3 /* UserDataService.swift in Sources */,
 				C81CF5D720691B90006DE707 /* ViewController.swift in Sources */,
 				C820DB06206E2D5200E98F4C /* LoginVC.swift in Sources */,
 				C8676059206BCCE000256E52 /* GradientView.swift in Sources */,
