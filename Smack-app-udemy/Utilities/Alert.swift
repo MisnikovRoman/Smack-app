@@ -23,3 +23,11 @@ func simpleAlert (title: String, message: String, buttonText: String, vc: UIView
     // Show alert message after button press
     vc.present(simpleAlertController, animated: true, completion: nil)
 }
+
+func alertWithClosure(title: String, message: String, buttonText: String, vc: UIViewController, completion: @escaping (_ action: UIAlertAction) -> ()) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: buttonText, style: .cancel, handler: completion)
+    alertController.addAction(action)
+    vc.present(alertController, animated: true, completion: nil)
+    
+}
