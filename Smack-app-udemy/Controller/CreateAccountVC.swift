@@ -25,6 +25,15 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // if we selected data in avatarPickerVC
+        if UserDataService.instance.avatarName != "" {
+            userImageView.image = UIImage(named: UserDataService.instance.avatarName)
+        }
+        // update property
+        avatarName = UserDataService.instance.avatarName
+    }
+    
     @IBAction func createAccountPressed(_ sender: Any) {
         
         // check data in name textField

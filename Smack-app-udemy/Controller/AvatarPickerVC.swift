@@ -72,6 +72,7 @@ extension AvatarPickerVC: UICollectionViewDelegate, UICollectionViewDataSource, 
         return cell
     }
     
+    // specify different cell size for small and big screens
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         // configure cells dimentions for small screens
@@ -88,6 +89,20 @@ extension AvatarPickerVC: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cellDimention = ((collectionView.bounds.width - padding) - (numberOfColumns - 1) * spaceBetweenCells) / numberOfColumns
         
         return CGSize(width: cellDimention, height: cellDimention)
+        
+    }
+    
+    // choose image after selection of item in collection view
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if avatarStyle == .dark {
+            UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
+        } else if avatarStyle == .light {
+            UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
+        }
+        
+        // go to previous screen
+        dismiss(animated: true, completion: nil)
+        
         
     }
     
