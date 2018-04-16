@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum AvatarType {
+    case dark
+    case light
+}
+
 class AvatarCell: UICollectionViewCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -16,6 +21,18 @@ class AvatarCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
+    }
+    
+    // set image and BG according to input parameters of method
+    func configureCell(index: Int, type: AvatarType) {
+        
+        if type == AvatarType.dark {
+            avatarImageView.image = UIImage(named: "dark\(index)")
+            self.layer.backgroundColor = UIColor.lightGray.cgColor
+        } else {
+            avatarImageView.image = UIImage(named: "light\(index)")
+            self.layer.backgroundColor = UIColor.gray.cgColor
+        }
     }
     
     // add BG color and rounded corners to our cells

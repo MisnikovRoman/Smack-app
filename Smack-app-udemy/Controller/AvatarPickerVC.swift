@@ -9,7 +9,11 @@
 import UIKit
 
 class AvatarPickerVC: UIViewController {
+    
+    // variables
+    public var avatarStyle = AvatarType.dark
 
+    // outlets
     @IBOutlet weak var segmentedControl: CustomSegmentedControl!
     @IBOutlet weak var avatarCollectionView: UICollectionView!
     
@@ -25,8 +29,12 @@ class AvatarPickerVC: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             print("Dark icons selected")
+            avatarStyle = .dark
+            avatarCollectionView.reloadData()
         case 1:
             print("Light icons selected")
+            avatarStyle = .light
+            avatarCollectionView.reloadData()
         default:
             print("There is extra button in segmented control")
         }
@@ -39,7 +47,7 @@ class AvatarPickerVC: UIViewController {
 }
 
 // extension to properly use Collection View
-extension UIViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension AvatarPickerVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // * UICollectionViewFlowLayout позволяет получить доступ к таким методам как:
     //  sizeForItemAt indexPath, insetForSectionAt section, minimumLineSpacingForSectionAt section, minimumInteritemSpacingForSectionAt section, referenceSizeForHeaderInSection section, referenceSizeForFooterInSection section
@@ -59,7 +67,7 @@ extension UIViewController: UICollectionViewDelegate, UICollectionViewDataSource
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AVATAR_CELL, for: indexPath) as! AvatarCell
         
-        cell.avatarImageView.image = UIImage(named: "dark9")
+        cell.configureCell(index: indexPath.item, type: avatarStyle)
         
         return cell
     }

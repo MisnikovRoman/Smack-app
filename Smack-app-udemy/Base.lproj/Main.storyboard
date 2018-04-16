@@ -450,37 +450,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kc7-bP-5Ls" customClass="CustomSegmentedControl" customModule="Smack_app_udemy" customModuleProvider="target">
-                                <rect key="frame" x="40" y="183" width="180" height="35"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="c0l-xX-jll"/>
-                                    <constraint firstAttribute="width" constant="180" id="wHa-pV-oDk"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonsTextColor">
-                                        <color key="value" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
-                                        <color key="value" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
-                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonsNames" value="Dark,Light"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="selectAvatarType:" destination="lWk-sR-zXs" eventType="valueChanged" id="FkM-13-Vek"/>
-                                </connections>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-91-2Sb">
-                                <rect key="frame" x="16" y="258" width="343" height="369"/>
+                                <rect key="frame" x="16" y="194" width="343" height="398"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3iN-Au-kD8">
                                     <size key="itemSize" width="80" height="80"/>
@@ -513,18 +484,47 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kc7-bP-5Ls" customClass="CustomSegmentedControl" customModule="Smack_app_udemy" customModuleProvider="target">
+                                <rect key="frame" x="97" y="612" width="180" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="c0l-xX-jll"/>
+                                    <constraint firstAttribute="width" constant="180" id="wHa-pV-oDk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonsTextColor">
+                                        <color key="value" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
+                                        <color key="value" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonsNames" value="Dark,Light"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectAvatarType:" destination="lWk-sR-zXs" eventType="valueChanged" id="FkM-13-Vek"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lbr-F8-xYK" firstAttribute="trailing" secondItem="Bmi-91-2Sb" secondAttribute="trailing" constant="16" id="579-1c-Sqi"/>
+                            <constraint firstItem="kc7-bP-5Ls" firstAttribute="centerX" secondItem="A9u-97-Cql" secondAttribute="centerX" id="KNf-2h-KXd"/>
                             <constraint firstItem="Bmi-91-2Sb" firstAttribute="leading" secondItem="lbr-F8-xYK" secondAttribute="leading" constant="16" id="UBV-A2-ecy"/>
-                            <constraint firstItem="kc7-bP-5Ls" firstAttribute="top" secondItem="Wf8-xA-gEQ" secondAttribute="bottom" constant="29" id="WyM-0b-Xsp"/>
-                            <constraint firstItem="kc7-bP-5Ls" firstAttribute="leading" secondItem="Wf8-xA-gEQ" secondAttribute="leading" id="XvX-v2-Yn6"/>
+                            <constraint firstItem="kc7-bP-5Ls" firstAttribute="top" secondItem="Bmi-91-2Sb" secondAttribute="bottom" constant="20" id="VeY-bE-XDe"/>
                             <constraint firstItem="Wf8-xA-gEQ" firstAttribute="top" secondItem="2kP-GR-5hZ" secondAttribute="bottom" constant="10" id="bbE-Lh-uMj"/>
                             <constraint firstItem="2kP-GR-5hZ" firstAttribute="leading" secondItem="lbr-F8-xYK" secondAttribute="leading" constant="40" id="fLy-lC-7fl"/>
                             <constraint firstItem="Wf8-xA-gEQ" firstAttribute="leading" secondItem="2kP-GR-5hZ" secondAttribute="leading" id="hZB-lP-aG8"/>
-                            <constraint firstItem="Bmi-91-2Sb" firstAttribute="top" secondItem="kc7-bP-5Ls" secondAttribute="bottom" constant="40" id="kxK-qa-BMe"/>
-                            <constraint firstItem="lbr-F8-xYK" firstAttribute="bottom" secondItem="Bmi-91-2Sb" secondAttribute="bottom" constant="40" id="tkq-ss-OJw"/>
+                            <constraint firstItem="lbr-F8-xYK" firstAttribute="bottom" secondItem="kc7-bP-5Ls" secondAttribute="bottom" constant="20" id="lHB-N2-6A5"/>
+                            <constraint firstItem="Bmi-91-2Sb" firstAttribute="top" secondItem="Wf8-xA-gEQ" secondAttribute="bottom" constant="40" id="oCU-eb-a6P"/>
                             <constraint firstItem="2kP-GR-5hZ" firstAttribute="top" secondItem="lbr-F8-xYK" secondAttribute="top" constant="22" id="yex-tP-lFa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lbr-F8-xYK"/>
