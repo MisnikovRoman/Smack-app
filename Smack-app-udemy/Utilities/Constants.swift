@@ -21,6 +21,7 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 // Segues constants
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "createAccount"
+let TO_AVATAR_PICKER = "toAvatarPicker"
 let UNWIND_TO_CHANNEL  = "unwindToChannel"
 
 // User defaults constants
@@ -31,3 +32,6 @@ let USER_EMAIL = "userEmail"
 // Headers constants
 // json object which will be transmitted with request
 let HEADER = ["Content-Type": "application/json; charset=utf-8"]
+
+// collection view constants
+let AVATAR_CELL = "avatarCell"

@@ -23,6 +23,9 @@
 		C8913E5420764F7A00ACB737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8913E5320764F7900ACB737 /* Assets.xcassets */; };
 		C89D4476206B8010004AD1EF /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4475206B8010004AD1EF /* ChatVC.swift */; };
 		C89D4478206B8022004AD1EF /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4477206B8022004AD1EF /* ChannelVC.swift */; };
+		C8DFFC292084963000D8CC8A /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DFFC282084963000D8CC8A /* AvatarPickerVC.swift */; };
+		C8DFFC2B2084984E00D8CC8A /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DFFC2A2084984D00D8CC8A /* CustomSegmentedControl.swift */; };
+		C8DFFC2D2084A37600D8CC8A /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DFFC2C2084A37600D8CC8A /* AvatarCell.swift */; };
 		C8FE9F2E20721353003B2C41 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		C8913E5320764F7900ACB737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C89D4475206B8010004AD1EF /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C89D4477206B8022004AD1EF /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		C8DFFC282084963000D8CC8A /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		C8DFFC2A2084984D00D8CC8A /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		C8DFFC2C2084A37600D8CC8A /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,7 @@
 				C89D4477206B8022004AD1EF /* ChannelVC.swift */,
 				C820DB05206E2D5200E98F4C /* LoginVC.swift */,
 				C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */,
+				C8DFFC282084963000D8CC8A /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,8 +163,10 @@
 		C89D4474206B7F87004AD1EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C8DFFC2A2084984D00D8CC8A /* CustomSegmentedControl.swift */,
 				C8676058206BCCE000256E52 /* GradientView.swift */,
 				C81D1780207E31460039B9DC /* RoundedButton.swift */,
+				C8DFFC2C2084A37600D8CC8A /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,9 +326,12 @@
 				C86621F1206B89870011F669 /* SWRevealViewController.m in Sources */,
 				C8FE9F2E20721353003B2C41 /* CreateAccountVC.swift in Sources */,
 				C84F3341207F3FBE003739A3 /* Alert.swift in Sources */,
+				C8DFFC2B2084984E00D8CC8A /* CustomSegmentedControl.swift in Sources */,
 				C81D1781207E31460039B9DC /* RoundedButton.swift in Sources */,
+				C8DFFC2D2084A37600D8CC8A /* AvatarCell.swift in Sources */,
 				C8883B04206D26ED00933F57 /* Constants.swift in Sources */,
 				C85A853B207DFC6A00D02E7E /* AuthService.swift in Sources */,
+				C8DFFC292084963000D8CC8A /* AvatarPickerVC.swift in Sources */,
 				C81CF5D520691B90006DE707 /* AppDelegate.swift in Sources */,
 				C89D4478206B8022004AD1EF /* ChannelVC.swift in Sources */,
 			);

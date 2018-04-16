@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="-37"/>
+            <point key="canvasLocation" x="41" y="-38"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="df7-1E-j87">
@@ -413,6 +413,7 @@
                         <outlet property="userImageView" destination="nq1-OD-IPs" id="Tik-gF-3YI"/>
                         <outlet property="userNameTextField" destination="dIe-zw-56S" id="nIB-UL-Ki3"/>
                         <segue destination="83S-BJ-EPs" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="Fui-OS-dhl"/>
+                        <segue destination="lWk-sR-zXs" kind="show" identifier="toAvatarPicker" id="ogG-VN-2mx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFK-NB-3As" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,36 +421,122 @@
             </objects>
             <point key="canvasLocation" x="2528.8000000000002" y="-375.56221889055473"/>
         </scene>
-        <!--View Controller-->
+        <!--Avatar PickerVC-->
         <scene sceneID="IX3-0F-qG3">
             <objects>
-                <viewController id="lWk-sR-zXs" sceneMemberID="viewController">
+                <viewController id="lWk-sR-zXs" customClass="AvatarPickerVC" customModule="Smack_app_udemy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A9u-97-Cql">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick avatar ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DK-rc-6E2">
-                                <rect key="frame" x="87" y="74" width="201" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kP-GR-5hZ">
+                                <rect key="frame" x="40" y="42" width="33" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="9eM-xW-Dit"/>
+                                    <constraint firstAttribute="width" constant="33" id="K3p-Ik-l7A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="lWk-sR-zXs" eventType="touchUpInside" id="BOK-Dj-6E4"/>
+                                    <action selector="backToLoginBtnPressed:" destination="ZGG-Wc-7y3" eventType="touchUpInside" id="Wm5-yY-Lgf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick avatar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf8-xA-gEQ">
+                                <rect key="frame" x="40" y="111" width="185" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⚠️ UICollectionView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBu-Dq-Deg">
-                                <rect key="frame" x="109" y="323" width="157" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kc7-bP-5Ls" customClass="CustomSegmentedControl" customModule="Smack_app_udemy" customModuleProvider="target">
+                                <rect key="frame" x="40" y="183" width="180" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="c0l-xX-jll"/>
+                                    <constraint firstAttribute="width" constant="180" id="wHa-pV-oDk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonsTextColor">
+                                        <color key="value" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
+                                        <color key="value" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonsNames" value="Dark,Light"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectAvatarType:" destination="lWk-sR-zXs" eventType="valueChanged" id="FkM-13-Vek"/>
+                                </connections>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-91-2Sb">
+                                <rect key="frame" x="16" y="258" width="343" height="369"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3iN-Au-kD8">
+                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="avatarCell" id="6Kk-cW-MO2" customClass="AvatarCell" customModule="Smack_app_udemy" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qt8-Jm-fpL">
+                                                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Qt8-Jm-fpL" secondAttribute="trailing" id="0jw-qv-phD"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Qt8-Jm-fpL" secondAttribute="bottom" id="QdX-9s-tBy"/>
+                                            <constraint firstItem="Qt8-Jm-fpL" firstAttribute="top" secondItem="6Kk-cW-MO2" secondAttribute="topMargin" id="nt6-WK-hmO"/>
+                                            <constraint firstItem="Qt8-Jm-fpL" firstAttribute="leading" secondItem="6Kk-cW-MO2" secondAttribute="leadingMargin" id="sYr-CY-W4G"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="Qt8-Jm-fpL" id="eeR-Mp-wGv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lbr-F8-xYK" firstAttribute="trailing" secondItem="Bmi-91-2Sb" secondAttribute="trailing" constant="16" id="579-1c-Sqi"/>
+                            <constraint firstItem="Bmi-91-2Sb" firstAttribute="leading" secondItem="lbr-F8-xYK" secondAttribute="leading" constant="16" id="UBV-A2-ecy"/>
+                            <constraint firstItem="kc7-bP-5Ls" firstAttribute="top" secondItem="Wf8-xA-gEQ" secondAttribute="bottom" constant="29" id="WyM-0b-Xsp"/>
+                            <constraint firstItem="kc7-bP-5Ls" firstAttribute="leading" secondItem="Wf8-xA-gEQ" secondAttribute="leading" id="XvX-v2-Yn6"/>
+                            <constraint firstItem="Wf8-xA-gEQ" firstAttribute="top" secondItem="2kP-GR-5hZ" secondAttribute="bottom" constant="10" id="bbE-Lh-uMj"/>
+                            <constraint firstItem="2kP-GR-5hZ" firstAttribute="leading" secondItem="lbr-F8-xYK" secondAttribute="leading" constant="40" id="fLy-lC-7fl"/>
+                            <constraint firstItem="Wf8-xA-gEQ" firstAttribute="leading" secondItem="2kP-GR-5hZ" secondAttribute="leading" id="hZB-lP-aG8"/>
+                            <constraint firstItem="Bmi-91-2Sb" firstAttribute="top" secondItem="kc7-bP-5Ls" secondAttribute="bottom" constant="40" id="kxK-qa-BMe"/>
+                            <constraint firstItem="lbr-F8-xYK" firstAttribute="bottom" secondItem="Bmi-91-2Sb" secondAttribute="bottom" constant="40" id="tkq-ss-OJw"/>
+                            <constraint firstItem="2kP-GR-5hZ" firstAttribute="top" secondItem="lbr-F8-xYK" secondAttribute="top" constant="22" id="yex-tP-lFa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lbr-F8-xYK"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarCollectionView" destination="Bmi-91-2Sb" id="hnh-zk-CKE"/>
+                        <outlet property="segmentedControl" destination="kc7-bP-5Ls" id="gtK-C4-mAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsJ-w6-LiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3372" y="-375"/>
+            <point key="canvasLocation" x="3372" y="-375.56221889055473"/>
         </scene>
         <!--ChannelVC-->
         <scene sceneID="0nU-0H-XFa">
@@ -490,7 +577,7 @@
                                 <color key="separatorColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bPN-aB-zRf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bPN-aB-zRf">
                                         <rect key="frame" x="0.0" y="28" width="295" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bPN-aB-zRf" id="LQC-q8-wmw">
