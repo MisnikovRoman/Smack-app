@@ -38,3 +38,7 @@ let AVATAR_CELL = "avatarCell"
 
 // Colors
 let placeholderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.5)
+
+// Notification constants
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+

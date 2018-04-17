@@ -88,11 +88,17 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
                                 print("(3/3) User \"\(UserDataService.instance.name)\" created")
                                 // stop activity animation
                                 self.stopAnimating()
+                                
+                                // Update: instead of alert we will use notifications
+                                /*
                                 // show alert with congrats message
                                 alertWithClosure(title: "Congratulations", message: "Successfully created new user", buttonText: "Continue", vc: self, completion: { (action) in
                                     // exit to main screen after "Continue" btn press
                                     self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
-                                })
+                                }) */
+                                
+                                // ADDING NOFIFICATION to show complition of registration:
+                                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                                 
                             } else {
                                 self.stopAnimating()
