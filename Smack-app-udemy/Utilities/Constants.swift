@@ -33,5 +33,8 @@ let USER_EMAIL = "userEmail"
 // json object which will be transmitted with request
 let HEADER = ["Content-Type": "application/json; charset=utf-8"]
 
-// collection view constants
+// Collection view constants
 let AVATAR_CELL = "avatarCell"
+
+// Colors
+let placeholderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.5)

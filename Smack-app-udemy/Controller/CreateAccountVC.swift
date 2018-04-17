@@ -11,21 +11,25 @@ import NVActivityIndicatorView
 
 class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
     
-    // Outlets
+    // MARK: - Outlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userImageView: UIImageView!
     
-    // Variables
+    // MARK: - Variables
     var avatarName = "ninja"       // default image name
     var avatarColor = "[0.5, 0.5, 0.5, 1]"  // default light gray color
+    var bgColor: UIColor?           // BG color for user image
     
+    // MARK: - Functiones
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        
         // if we selected data in avatarPickerVC
         if UserDataService.instance.avatarName != "" {
             userImageView.image = UIImage(named: UserDataService.instance.avatarName)
@@ -34,6 +38,25 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
         avatarName = UserDataService.instance.avatarName
     }
     
+    // update some parameters in view
+    func setupView() {
+        // here we will edit color of textField placeholder
+        userNameTextField.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: placeholderColor])
+        loginTextField.attributedPlaceholder = NSAttributedString(string: "e-mail", attributes: [NSAttributedStringKey.foregroundColor: placeholderColor])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: placeholderColor])
+        
+        // add gesture recognizer for hiding keyboard
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        // assign tap gesture recognizer to view
+        view.addGestureRecognizer(tap)
+    }
+    
+    // hide keyboard (resign the first responder status)
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
+    // MARK: - Handling of buttons presses
     @IBAction func createAccountPressed(_ sender: Any) {
         
         // check data in name textField
@@ -84,9 +107,6 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
             }
         }
         
-        
-        
-        
     }
     
     @IBAction func pickAvatarPressed(_ sender: Any) {
@@ -94,6 +114,19 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
     }
     
     @IBAction func pickBGColorPressed(_ sender: Any) {
+        //create randomly generated UIColor and send it to bgColor variable
+        let r = CGFloat(arc4random_uniform(255)) / 255
+        let g = CGFloat(arc4random_uniform(255)) / 255
+        let b = CGFloat(arc4random_uniform(255)) / 255
+        
+        // set generated color
+        bgColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
+        
+        // animate color change
+        UIView.animate(withDuration: 0.3) {
+            self.userImageView.backgroundColor = self.bgColor
+        }
+        
     }
     
     @IBAction func backToLoginBtnPressed(_ sender: Any) {
