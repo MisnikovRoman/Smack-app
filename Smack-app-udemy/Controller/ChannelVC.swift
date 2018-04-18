@@ -37,9 +37,12 @@ class ChannelVC: UIViewController {
             
             // change profile photo (default: "ninja")
             userImageView.image = UIImage(named: UserDataService.instance.avatarName)
+            
             // change background color
             guard UserDataService.instance.avatarName != "ninja" else { return }
-            userImageView.backgroundColor = UIColor.lightGray
+            
+            // use our function to convert text data to color and set it to ImageView
+            userImageView.backgroundColor = UserDataService.instance.returnUIColor(input: UserDataService.instance.avatarColor)
             
         } else {
             // if we logged out

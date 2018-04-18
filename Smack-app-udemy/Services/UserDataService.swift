@@ -10,8 +10,10 @@ import Foundation
 
 class UserDataService {
     
+    // property of UserDataService class
     static let instance = UserDataService()
     
+    // MARK: - Properties
     // "public" - other classes can read it
     // "private(set)" - edit this value only from this class
     public private(set) var id = ""
@@ -20,6 +22,7 @@ class UserDataService {
     public private(set) var email = ""
     public private(set) var name = ""
     
+    // MARK: - Methods
     // method to change our private settings above
     func setUserDataService(id: String, color: String, avatarName: String, email: String, name: String) {
         self.id = id
@@ -56,6 +59,7 @@ class UserDataService {
         return UIColor(red: rgbCGFloat[0], green: rgbCGFloat[1], blue: rgbCGFloat[2], alpha: 1)
     }
     
+    // same as function before
     func returnUIColorByUdemy(input: String) -> UIColor {
         
         // second variation of function from lesson

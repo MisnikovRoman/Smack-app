@@ -24,11 +24,22 @@
 		C8913E5420764F7A00ACB737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8913E5320764F7900ACB737 /* Assets.xcassets */; };
 		C89D4476206B8010004AD1EF /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4475206B8010004AD1EF /* ChatVC.swift */; };
 		C89D4478206B8022004AD1EF /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4477206B8022004AD1EF /* ChannelVC.swift */; };
+		C8BBE8C120877ABA0039B8C3 /* Smack_app_udemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BBE8C020877ABA0039B8C3 /* Smack_app_udemyTests.swift */; };
 		C8DFFC292084963000D8CC8A /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DFFC282084963000D8CC8A /* AvatarPickerVC.swift */; };
 		C8DFFC2B2084984E00D8CC8A /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DFFC2A2084984D00D8CC8A /* CustomSegmentedControl.swift */; };
 		C8DFFC2D2084A37600D8CC8A /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DFFC2C2084A37600D8CC8A /* AvatarCell.swift */; };
 		C8FE9F2E20721353003B2C41 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FE9F2D20721353003B2C41 /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8BBE8C320877ABA0039B8C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C81CF5C920691B90006DE707 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C81CF5D020691B90006DE707;
+			remoteInfo = "Smack-app-udemy";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2E62213C17FF56DD13E9E79C /* Pods_Smack_app_udemy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack_app_udemy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +64,9 @@
 		C8913E5320764F7900ACB737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C89D4475206B8010004AD1EF /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C89D4477206B8022004AD1EF /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		C8BBE8BE20877ABA0039B8C3 /* Smack-app-udemyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smack-app-udemyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8BBE8C020877ABA0039B8C3 /* Smack_app_udemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smack_app_udemyTests.swift; sourceTree = "<group>"; };
+		C8BBE8C220877ABA0039B8C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8DFFC282084963000D8CC8A /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		C8DFFC2A2084984D00D8CC8A /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		C8DFFC2C2084A37600D8CC8A /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -65,6 +79,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC65ADA06190D75E39CC4AFA /* Pods_Smack_app_udemy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8BBE8BB20877ABA0039B8C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C81CF5D320691B90006DE707 /* Smack-app-udemy */,
+				C8BBE8BF20877ABA0039B8C3 /* Smack-app-udemyTests */,
 				C81CF5D220691B90006DE707 /* Products */,
 				E343DDD8F046EA427A01EA3D /* Pods */,
 				2A11189B88718B55874440B8 /* Frameworks */,
@@ -93,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				C81CF5D120691B90006DE707 /* Smack-app-udemy.app */,
+				C8BBE8BE20877ABA0039B8C3 /* Smack-app-udemyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +197,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C8BBE8BF20877ABA0039B8C3 /* Smack-app-udemyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8BBE8C020877ABA0039B8C3 /* Smack_app_udemyTests.swift */,
+				C8BBE8C220877ABA0039B8C3 /* Info.plist */,
+			);
+			path = "Smack-app-udemyTests";
+			sourceTree = "<group>";
+		};
 		E343DDD8F046EA427A01EA3D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,13 +238,31 @@
 			productReference = C81CF5D120691B90006DE707 /* Smack-app-udemy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C8BBE8BD20877ABA0039B8C3 /* Smack-app-udemyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8BBE8C720877ABA0039B8C3 /* Build configuration list for PBXNativeTarget "Smack-app-udemyTests" */;
+			buildPhases = (
+				C8BBE8BA20877ABA0039B8C3 /* Sources */,
+				C8BBE8BB20877ABA0039B8C3 /* Frameworks */,
+				C8BBE8BC20877ABA0039B8C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8BBE8C420877ABA0039B8C3 /* PBXTargetDependency */,
+			);
+			name = "Smack-app-udemyTests";
+			productName = "Smack-app-udemyTests";
+			productReference = C8BBE8BE20877ABA0039B8C3 /* Smack-app-udemyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C81CF5C920691B90006DE707 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Роман Мисников";
 				TargetAttributes = {
@@ -220,6 +270,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+					};
+					C8BBE8BD20877ABA0039B8C3 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C81CF5D020691B90006DE707;
 					};
 				};
 			};
@@ -237,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				C81CF5D020691B90006DE707 /* Smack-app-udemy */,
+				C8BBE8BD20877ABA0039B8C3 /* Smack-app-udemyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +305,13 @@
 				C81CF5DF20691B90006DE707 /* LaunchScreen.storyboard in Resources */,
 				C8913E5420764F7A00ACB737 /* Assets.xcassets in Resources */,
 				C81CF5DA20691B90006DE707 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8BBE8BC20877ABA0039B8C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +404,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C8BBE8BA20877ABA0039B8C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BBE8C120877ABA0039B8C3 /* Smack_app_udemyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8BBE8C420877ABA0039B8C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C81CF5D020691B90006DE707 /* Smack-app-udemy */;
+			targetProxy = C8BBE8C320877ABA0039B8C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C81CF5D820691B90006DE707 /* Main.storyboard */ = {
@@ -507,6 +586,46 @@
 			};
 			name = Release;
 		};
+		C8BBE8C520877ABA0039B8C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJHX98NUDV;
+				INFOPLIST_FILE = "Smack-app-udemyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "RFMisnikov.Smack-app-udemyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smack-app-udemy.app/Smack-app-udemy";
+			};
+			name = Debug;
+		};
+		C8BBE8C620877ABA0039B8C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJHX98NUDV;
+				INFOPLIST_FILE = "Smack-app-udemyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "RFMisnikov.Smack-app-udemyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smack-app-udemy.app/Smack-app-udemy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -524,6 +643,15 @@
 			buildConfigurations = (
 				C81CF5E420691B90006DE707 /* Debug */,
 				C81CF5E520691B90006DE707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8BBE8C720877ABA0039B8C3 /* Build configuration list for PBXNativeTarget "Smack-app-udemyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8BBE8C520877ABA0039B8C3 /* Debug */,
+				C8BBE8C620877ABA0039B8C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
