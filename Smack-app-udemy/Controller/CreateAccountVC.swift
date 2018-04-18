@@ -69,7 +69,7 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
         // run activity indicator
         startAnimating(message: "Подождите, идет обмен данными с сервером")
         
-        // 1st step - make request
+        // 1st step - register user
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             
             // in Authservice.swift we wrote that if there are no errors -> closure BOOL is true
@@ -89,15 +89,13 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
                                 // stop activity animation
                                 self.stopAnimating()
                                 
-                                // Update: instead of alert we will use notifications
-                                /*
                                 // show alert with congrats message
                                 alertWithClosure(title: "Congratulations", message: "Successfully created new user", buttonText: "Continue", vc: self, completion: { (action) in
                                     // exit to main screen after "Continue" btn press
                                     self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
-                                }) */
+                                })
                                 
-                                // ADDING NOFIFICATION to show complition of registration:
+                                // ADDING NOFIFICATION to edit name and profile image on ChannelVC:
                                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                                 
                             } else {
@@ -127,6 +125,9 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
         
         // set generated color
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
+        
+        // export selected color
+        avatarColor = "[\(r), \(g), \(b), 1]"
         
         // animate color change
         UIView.animate(withDuration: 0.3) {

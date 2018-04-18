@@ -10,13 +10,42 @@ import UIKit
 
 class ChannelVC: UIViewController {
 
-    
-    @IBOutlet weak var loginBtn: UIButton! // to change make after login
+    // Outlets
+    @IBOutlet weak var userImageView: UIImageView!  // will be changed after log in
+    @IBOutlet weak var loginBtn: UIButton!          // will be changed after log in
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         revealViewController().rearViewRevealWidth = view.frame.size.width - 70
+        
+        // add observer to "listen" notification from CreateAccountVC (line: 90)
+        NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+    }
+    
+    // handler for our notification
+    @objc func userDataDidChange(_ notif: Notification) {
+        // will be executed after receving notification ->
+        // after complition of 3 steps in CreateAccountVC:
+        // 1. Reguister user
+        // 2. Log in user
+        // 3. Create user
+        
+        if AuthService.instance.isLoggedIn {
+            // change button title with name of logged in user
+            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
+            
+            // change profile photo (default: "ninja")
+            userImageView.image = UIImage(named: UserDataService.instance.avatarName)
+            // change background color
+            guard UserDataService.instance.avatarName != "ninja" else { return }
+            userImageView.backgroundColor = UIColor.lightGray
+            
+        } else {
+            // if we logged out
+            loginBtn.setTitle("Login", for: .normal)
+            userImageView.image = UIImage(named: "profile3")
+        }
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
