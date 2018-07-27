@@ -10,10 +10,11 @@ import UIKit
 
 class ChannelVC: UIViewController {
 
-    // Outlets
+    // MARK: - Outlets
     @IBOutlet weak var userImageView: UIImageView!  // will be changed after log in
     @IBOutlet weak var loginBtn: UIButton!          // will be changed after log in
     
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,8 +52,19 @@ class ChannelVC: UIViewController {
         }
     }
     
+    // MARK: - Buttons actions
     @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+               
+        if AuthService.instance.isLoggedIn {
+            // show ProfileVC
+            let profile = ProfileVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+            
+        } else {
+            // show LoginVC
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
     }
     
     // our custom func for exit from 'Create account VC' to this ('Channel VC')

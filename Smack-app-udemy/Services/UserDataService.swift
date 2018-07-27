@@ -32,6 +32,20 @@ class UserDataService {
         self.name = name
     }
     
+    
+    // logout and erase all variables
+    func logoutUser() {
+        id = ""
+        avatarName = ""
+        avatarColor = ""
+        email = ""
+        name = ""
+        
+        AuthService.instance.isLoggedIn = false
+        AuthService.instance.userEmail = ""
+        AuthService.instance.authToken = ""
+    }
+    
     // update avatar name parameter
     func setAvatarName(avatarName: String) {
         self.avatarName = avatarName
@@ -40,6 +54,8 @@ class UserDataService {
     // return color from String as "[0.5, 0.2, 0.2, 1]"
     func returnUIColor(input: String) -> UIColor {
         // format: "[0.5, 0.2, 0.2, 1]"
+        
+        guard input != "" else {return UIColor.lightGray}
         
         // copy data
         var inputCopy = input
@@ -103,5 +119,7 @@ class UserDataService {
         
         return newUIColor
     }
+    
+    
     
 }

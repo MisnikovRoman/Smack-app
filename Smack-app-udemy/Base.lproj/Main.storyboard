@@ -547,10 +547,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="UIV-x5-goZ" customClass="CircleImageView" customModule="Smack_app_udemy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="547" width="100" height="100"/>
+                                <rect key="frame" x="40" y="567" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="F9L-VF-GgC"/>
-                                    <constraint firstAttribute="height" constant="100" id="pgI-cb-e0G"/>
+                                    <constraint firstAttribute="width" constant="80" id="F9L-VF-GgC"/>
+                                    <constraint firstAttribute="height" constant="80" id="pgI-cb-e0G"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUB-2k-ZHO">
@@ -562,7 +562,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnv-qH-b45">
-                                <rect key="frame" x="124" y="579" width="43" height="36"/>
+                                <rect key="frame" x="140" y="589" width="43" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -572,7 +572,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1OF-Fr-ePT">
-                                <rect key="frame" x="40" y="190" width="295" height="337"/>
+                                <rect key="frame" x="40" y="190" width="295" height="357"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -601,7 +601,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcY-X3-Jug">
-                                <rect key="frame" x="41" y="111" width="158.5" height="43"/>
+                                <rect key="frame" x="40" y="111" width="158.5" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -610,8 +610,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tnv-qH-b45" firstAttribute="centerY" secondItem="UIV-x5-goZ" secondAttribute="centerY" id="5i0-qH-ks5"/>
-                            <constraint firstItem="UIV-x5-goZ" firstAttribute="leading" secondItem="gd8-8X-2ge" secondAttribute="leading" constant="16" id="8ki-IB-eG8"/>
-                            <constraint firstItem="tnv-qH-b45" firstAttribute="leading" secondItem="UIV-x5-goZ" secondAttribute="trailing" constant="8" id="AOf-82-vwk"/>
+                            <constraint firstItem="UIV-x5-goZ" firstAttribute="leading" secondItem="gd8-8X-2ge" secondAttribute="leading" constant="40" id="8ki-IB-eG8"/>
+                            <constraint firstItem="tnv-qH-b45" firstAttribute="leading" secondItem="UIV-x5-goZ" secondAttribute="trailing" constant="20" id="AOf-82-vwk"/>
                             <constraint firstItem="gd8-8X-2ge" firstAttribute="bottom" secondItem="UIV-x5-goZ" secondAttribute="bottom" constant="20" id="BKG-sX-qCe"/>
                             <constraint firstItem="UIV-x5-goZ" firstAttribute="top" secondItem="1OF-Fr-ePT" secondAttribute="bottom" constant="20" id="CgJ-gt-Xp7"/>
                             <constraint firstItem="lUB-2k-ZHO" firstAttribute="top" secondItem="gd8-8X-2ge" secondAttribute="top" constant="43" id="Exq-Qp-nqF"/>
@@ -685,13 +685,6 @@
                                     <constraint firstItem="XlA-Yz-1VI" firstAttribute="centerX" secondItem="rVS-VY-779" secondAttribute="centerX" id="tgo-Wy-zSO"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⚠️ Lesson 69 - End on 00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJX-dt-rT4">
-                                <rect key="frame" x="75" y="485" width="227" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRt-yI-aL2" customClass="RoundedButton" customModule="Smack_app_udemy" customModuleProvider="target">
                                 <rect key="frame" x="126" y="560" width="123" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -706,6 +699,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⚠️ В конце не забыть отключить в info.plist App Transport Security Settings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJX-dt-rT4">
+                                <rect key="frame" x="27" y="93" width="321" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

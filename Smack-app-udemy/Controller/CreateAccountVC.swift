@@ -89,7 +89,7 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
                                 // stop activity animation
                                 self.stopAnimating()
                                 
-                                // show alert with congrats message
+                                // show alert with congrats mefssage
                                 alertWithClosure(title: "Congratulations", message: "Successfully created new user", buttonText: "Continue", vc: self, completion: { (action) in
                                     // exit to main screen after "Continue" btn press
                                     self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
