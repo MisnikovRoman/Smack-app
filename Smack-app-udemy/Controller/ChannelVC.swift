@@ -13,14 +13,12 @@ class ChannelVC: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var userImageView: UIImageView!  // will be changed after log in
     @IBOutlet weak var loginBtn: UIButton!          // will be changed after log in
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // ⚠️⚠️⚠️ testing - delete after
-        testAutoLogging()
-
+    
         revealViewController().rearViewRevealWidth = view.frame.size.width - 70
         
         // add observer to "listen" notification from CreateAccountVC (line: 90)
@@ -56,24 +54,6 @@ class ChannelVC: UIViewController {
     // our custom func for exit from 'Create account VC' to this ('Channel VC')
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
     
-    private func testAutoLogging() {
-        
-        let userName = UserDataService.instance.name
-        let _ = UserDataService.instance.email
-        let id = UserDataService.instance.id
-        let avatar = UserDataService.instance.avatarName
-        let color = UserDataService.instance.avatarColor
-        
-        print("🧑🏼USER INFO:")
-        print("Email:", AuthService.instance.userEmail)
-        print("Auth token:", AuthService.instance.authToken)
-        print("Name:", userName)
-        print("ID:", id)
-        print("Avatar:", avatar)
-        print("BGColor:", color)
-        
-    }
-    
     private func setupUserInfo() {
         
         // will be executed after receving notification ->
@@ -102,5 +82,24 @@ class ChannelVC: UIViewController {
         }
     }
     
+}
+
+extension ChannelVC: UITableViewDelegate {
+    
+}
+
+extension ChannelVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.channels.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CHANNEL_CELL, for: indexPath) as? ChannelCell else { return UITableViewCell() }
+        let channel = MessageService.instance.channels[indexPath.row]
+        cell.setupCell(channel: channel)
+        
+        return cell
+    }
 }
 

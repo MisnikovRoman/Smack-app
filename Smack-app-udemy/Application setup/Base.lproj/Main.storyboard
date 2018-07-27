@@ -579,15 +579,15 @@
                                 <color key="separatorColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bPN-aB-zRf">
-                                        <rect key="frame" x="0.0" y="28" width="295" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" rowHeight="40" id="bPN-aB-zRf" customClass="ChannelCell" customModule="Smack_app_udemy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="295" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bPN-aB-zRf" id="LQC-q8-wmw">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#basic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxL-YK-KcU">
-                                                    <rect key="frame" x="0.0" y="11.5" width="51" height="21"/>
+                                                    <rect key="frame" x="0.0" y="9.5" width="51" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -599,8 +599,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="yxL-YK-KcU" id="LaV-ul-vyD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="M3w-jQ-c2H" id="Pjy-h0-bYE"/>
+                                    <outlet property="delegate" destination="M3w-jQ-c2H" id="UTH-oq-v4W"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcY-X3-Jug">
                                 <rect key="frame" x="41" y="111" width="158.5" height="43"/>
@@ -636,6 +643,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="tnv-qH-b45" id="XY1-zy-mJl"/>
+                        <outlet property="tableView" destination="1OF-Fr-ePT" id="pbp-Hw-bQA"/>
                         <outlet property="userImageView" destination="UIV-x5-goZ" id="8rP-jN-Hou"/>
                         <segue destination="Hgr-ws-pHG" kind="show" identifier="toLogin" id="pSs-xp-y5v"/>
                     </connections>

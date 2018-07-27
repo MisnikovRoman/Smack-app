@@ -16,7 +16,7 @@ class MessageService {
     
     static let instance = MessageService()
     
-    private var channels = [Channel]()
+    private(set) public var channels = [Channel]()
     
     // func to get channels via API
     func findAllChannels(completion: @escaping CompletionHandler) {

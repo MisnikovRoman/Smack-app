@@ -42,6 +42,7 @@ let BEARER_HEADER = [
 
 // Collection view constants
 let AVATAR_CELL = "avatarCell"
+let CHANNEL_CELL = "channelCell"
 
 // Colors
 let placeholderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.5)
