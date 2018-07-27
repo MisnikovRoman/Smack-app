@@ -562,6 +562,9 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addChannelBtnTap:" destination="M3w-jQ-c2H" eventType="touchUpInside" id="EHI-9n-eDo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnv-qH-b45">
                                 <rect key="frame" x="140" y="589" width="43" height="36"/>
@@ -586,21 +589,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#basic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxL-YK-KcU">
-                                                    <rect key="frame" x="0.0" y="9.5" width="51" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y35-RG-czp">
+                                                    <rect key="frame" x="0.0" y="5" width="67" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#basic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxL-YK-KcU">
+                                                            <rect key="frame" x="8" y="4.5" width="51" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="0.30244006849315069" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="yxL-YK-KcU" secondAttribute="trailing" constant="8" id="34r-KZ-YyW"/>
+                                                        <constraint firstItem="yxL-YK-KcU" firstAttribute="leading" secondItem="y35-RG-czp" secondAttribute="leading" constant="8" id="Gbc-Dh-qZP"/>
+                                                        <constraint firstItem="yxL-YK-KcU" firstAttribute="centerY" secondItem="y35-RG-czp" secondAttribute="centerY" id="Grm-6o-k37"/>
+                                                        <constraint firstAttribute="height" constant="30" id="khB-PL-y5R"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yxL-YK-KcU" firstAttribute="leading" secondItem="LQC-q8-wmw" secondAttribute="leadingMargin" constant="-15" id="7E4-5K-OfE"/>
-                                                <constraint firstItem="yxL-YK-KcU" firstAttribute="centerY" secondItem="LQC-q8-wmw" secondAttribute="centerY" id="ogV-SR-BdI"/>
+                                                <constraint firstItem="y35-RG-czp" firstAttribute="centerY" secondItem="LQC-q8-wmw" secondAttribute="centerY" id="He5-9a-P8b"/>
+                                                <constraint firstItem="y35-RG-czp" firstAttribute="leading" secondItem="LQC-q8-wmw" secondAttribute="leading" id="UHy-eN-qCB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="nameLbl" destination="yxL-YK-KcU" id="LaV-ul-vyD"/>
+                                            <outlet property="selectionBGView" destination="y35-RG-czp" id="Dcl-Lf-EmH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

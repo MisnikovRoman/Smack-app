@@ -11,6 +11,8 @@ import Foundation
 // создание псевдонима для Замыкания
 // простейший пример: typealias AudioSimple = UInt16
 typealias CompletionHandler = (_ Success: Bool) -> ()
+// тип анимации для viewController-ов созданных черех XIB
+enum AnimationType { case show, hide }
 
 // URL constants
 // let BASE_URL = "https://chatapp-test.herokuapp.com/v1/"

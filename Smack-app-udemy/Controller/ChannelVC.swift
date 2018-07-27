@@ -51,9 +51,23 @@ class ChannelVC: UIViewController {
         }
     }
     
+    @IBAction func addChannelBtnTap(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            // show ProfileVC
+            let addChannelVC = AddChannelVC()
+            addChannelVC.modalPresentationStyle = .custom
+            present(addChannelVC, animated: true, completion: nil)
+            
+        } else {
+            // show LoginVC
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
+    }
+    
     // our custom func for exit from 'Create account VC' to this ('Channel VC')
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
     
+    // MARK: - Class methods
     private func setupUserInfo() {
         
         // will be executed after receving notification ->
@@ -84,8 +98,13 @@ class ChannelVC: UIViewController {
     
 }
 
+// MARK: - Table View protocols
 extension ChannelVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // set selector corner radius
+        guard let cell = cell as? ChannelCell else { return }
+        cell.selectionBGView.layer.cornerRadius = cell.selectionBGView.frame.height / 2
+    }
 }
 
 extension ChannelVC: UITableViewDataSource {
