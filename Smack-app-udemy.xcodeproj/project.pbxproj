@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BC65ADA06190D75E39CC4AFA /* Pods_Smack_app_udemy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E62213C17FF56DD13E9E79C /* Pods_Smack_app_udemy.framework */; };
 		C81CF5D520691B90006DE707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CF5D420691B90006DE707 /* AppDelegate.swift */; };
-		C81CF5D720691B90006DE707 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CF5D620691B90006DE707 /* ViewController.swift */; };
 		C81CF5DA20691B90006DE707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5D820691B90006DE707 /* Main.storyboard */; };
 		C81CF5DF20691B90006DE707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81CF5DD20691B90006DE707 /* LaunchScreen.storyboard */; };
 		C81D1781207E31460039B9DC /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D1780207E31460039B9DC /* RoundedButton.swift */; };
@@ -49,7 +48,6 @@
 		A30B05CD853205F568F903FB /* Pods-Smack-app-udemy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack-app-udemy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack-app-udemy/Pods-Smack-app-udemy.debug.xcconfig"; sourceTree = "<group>"; };
 		C81CF5D120691B90006DE707 /* Smack-app-udemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smack-app-udemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81CF5D420691B90006DE707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C81CF5D620691B90006DE707 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C81CF5D920691B90006DE707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C81CF5DE20691B90006DE707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C81CF5E020691B90006DE707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,19 +125,13 @@
 		C81CF5D320691B90006DE707 /* Smack-app-udemy */ = {
 			isa = PBXGroup;
 			children = (
-				C8BBE8CC208787AD0039B8C3 /* XIBs */,
+				C8B66260210AFEAA001E96B8 /* Application setup */,
 				C85A8539207DFC5500D02E7E /* Services */,
-				C8883B02206D26D400933F57 /* Utilities */,
-				C86621EB206B890B0011F669 /* Supporting files */,
 				C89D4473206B7F7C004AD1EF /* Model */,
 				C89D4474206B7F87004AD1EF /* View */,
 				C89D4472206B7F66004AD1EF /* Controller */,
-				C81CF5D420691B90006DE707 /* AppDelegate.swift */,
-				C81CF5D620691B90006DE707 /* ViewController.swift */,
-				C8913E5320764F7900ACB737 /* Assets.xcassets */,
-				C81CF5D820691B90006DE707 /* Main.storyboard */,
-				C81CF5DD20691B90006DE707 /* LaunchScreen.storyboard */,
-				C81CF5E020691B90006DE707 /* Info.plist */,
+				C8883B02206D26D400933F57 /* Utilities */,
+				C86621EB206B890B0011F669 /* Supporting files */,
 			);
 			path = "Smack-app-udemy";
 			sourceTree = "<group>";
@@ -158,6 +150,8 @@
 			children = (
 				C86621EF206B89870011F669 /* SWRevealViewController.h */,
 				C86621F0206B89870011F669 /* SWRevealViewController.m */,
+				C8913E5320764F7900ACB737 /* Assets.xcassets */,
+				C81CF5E020691B90006DE707 /* Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -194,6 +188,7 @@
 		C89D4474206B7F87004AD1EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C8BBE8CC208787AD0039B8C3 /* XIBs */,
 				C8DFFC2A2084984D00D8CC8A /* CustomSegmentedControl.swift */,
 				C8676058206BCCE000256E52 /* GradientView.swift */,
 				C81D1780207E31460039B9DC /* RoundedButton.swift */,
@@ -201,6 +196,16 @@
 				C87875242085E1B900634D05 /* CircleImageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C8B66260210AFEAA001E96B8 /* Application setup */ = {
+			isa = PBXGroup;
+			children = (
+				C81CF5D420691B90006DE707 /* AppDelegate.swift */,
+				C81CF5D820691B90006DE707 /* Main.storyboard */,
+				C81CF5DD20691B90006DE707 /* LaunchScreen.storyboard */,
+			);
+			path = "Application setup";
 			sourceTree = "<group>";
 		};
 		C8BBE8BF20877ABA0039B8C3 /* Smack-app-udemyTests */ = {
@@ -401,7 +406,6 @@
 			files = (
 				C89D4476206B8010004AD1EF /* ChatVC.swift in Sources */,
 				C84F3361207F5915003739A3 /* UserDataService.swift in Sources */,
-				C81CF5D720691B90006DE707 /* ViewController.swift in Sources */,
 				C820DB06206E2D5200E98F4C /* LoginVC.swift in Sources */,
 				C8676059206BCCE000256E52 /* GradientView.swift in Sources */,
 				C86621F1206B89870011F669 /* SWRevealViewController.m in Sources */,
@@ -573,7 +577,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
-				INFOPLIST_FILE = "Smack-app-udemy/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Smack-app-udemy/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RFMisnikov.Smack-app-udemy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,7 +597,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
-				INFOPLIST_FILE = "Smack-app-udemy/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Smack-app-udemy/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RFMisnikov.Smack-app-udemy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
