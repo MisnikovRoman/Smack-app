@@ -25,9 +25,11 @@ class ProfileVC: UIViewController {
 
     // specify name, email and image in VC
     func setupView() {
+        // get and set user info from UserData (name, email, avatarName, BGColor)
         nameLbl.text = UserDataService.instance.name
         emailLbl.text = UserDataService.instance.email
         avatarImageView.image = UIImage(named: UserDataService.instance.avatarName)
+        // image bg color
         let bgColor = UserDataService.instance.avatarColor
         avatarImageView.backgroundColor = UserDataService.instance.returnUIColor(input: bgColor)
         

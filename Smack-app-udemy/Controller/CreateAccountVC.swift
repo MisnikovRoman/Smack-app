@@ -19,7 +19,7 @@ class CreateAccountVC: UIViewController, NVActivityIndicatorViewable{
     
     // MARK: - Variables
     var avatarName = "ninja"       // default image name
-    var avatarColor = "[0.5, 0.5, 0.5, 1]"  // default light gray color
+    var avatarColor = "[0.5, 0.5, 0.5, 0]"  // default light gray color
     var bgColor: UIColor?           // BG color for user image
     
     // MARK: - Functiones

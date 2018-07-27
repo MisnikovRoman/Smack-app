@@ -55,7 +55,8 @@ class UserDataService {
     func returnUIColor(input: String) -> UIColor {
         // format: "[0.5, 0.2, 0.2, 1]"
         
-        guard input != "" else {return UIColor.lightGray}
+        // standart color
+        guard input != "" else {return UIColor.clear}
         
         // copy data
         var inputCopy = input

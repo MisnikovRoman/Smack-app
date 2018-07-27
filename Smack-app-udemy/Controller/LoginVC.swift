@@ -31,5 +31,8 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
     }
     
+    @IBAction func loginBtnPressed(_ sender: Any) {
+        // login user with password and user name
+    }
     
 }
