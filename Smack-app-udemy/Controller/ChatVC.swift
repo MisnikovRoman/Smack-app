@@ -31,6 +31,20 @@ class ChatVC: UIViewController {
         // this methods is in SWReveal files:
         view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
+        
+        // check logged in
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUserByEmail { (success) in
+                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+            }
+        }
+        
+        // test channel loading
+        MessageService.instance.findAllChannels { (success) in
+            if success {
+                print("SOME PRINT CODE")
+            }
+        }
      
     }
 }

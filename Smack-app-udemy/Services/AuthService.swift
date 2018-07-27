@@ -165,6 +165,7 @@ class AuthService {
                     completion(true)
                     
                 } catch {
+                    completion(false)
                     print("Error in create user")
                 }
                 

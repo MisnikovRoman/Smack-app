@@ -29,6 +29,53 @@ class ChannelVC: UIViewController {
     
     // handler for our notification
     @objc func userDataDidChange(_ notif: Notification) {
+        setupUserInfo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupUserInfo()
+    }
+    
+    // MARK: - Buttons actions
+    @IBAction func loginBtnPressed(_ sender: Any) {
+               
+        if AuthService.instance.isLoggedIn {
+            // show ProfileVC
+            let profile = ProfileVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+            
+        } else {
+            // show LoginVC
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
+    }
+    
+    // our custom func for exit from 'Create account VC' to this ('Channel VC')
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
+    
+    private func testAutoLogging() {
+        
+        let userName = UserDataService.instance.name
+        let _ = UserDataService.instance.email
+        let id = UserDataService.instance.id
+        let avatar = UserDataService.instance.avatarName
+        let color = UserDataService.instance.avatarColor
+        
+        print("🧑🏼USER INFO:")
+        print("Email:", AuthService.instance.userEmail)
+        print("Auth token:", AuthService.instance.authToken)
+        print("Name:", userName)
+        print("ID:", id)
+        print("Avatar:", avatar)
+        print("BGColor:", color)
+        
+    }
+    
+    private func setupUserInfo() {
+        
         // will be executed after receving notification ->
         // after complition of 3 steps in CreateAccountVC:
         // 1. Reguister user
@@ -55,42 +102,5 @@ class ChannelVC: UIViewController {
         }
     }
     
-    // MARK: - Buttons actions
-    @IBAction func loginBtnPressed(_ sender: Any) {
-               
-        if AuthService.instance.isLoggedIn {
-            // show ProfileVC
-            let profile = ProfileVC()
-            profile.modalPresentationStyle = .custom
-            present(profile, animated: true, completion: nil)
-            
-        } else {
-            // show LoginVC
-            performSegue(withIdentifier: TO_LOGIN, sender: nil)
-        }
-    }
-    
-    // our custom func for exit from 'Create account VC' to this ('Channel VC')
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        
-    }
-    
-    private func testAutoLogging() {
-        
-        let userName = UserDataService.instance.name
-        let _ = UserDataService.instance.email
-        let id = UserDataService.instance.id
-        let avatar = UserDataService.instance.avatarName
-        let color = UserDataService.instance.avatarColor
-        
-        print("🧑🏼USER INFO:")
-        print("Email:", AuthService.instance.userEmail)
-        print("Auth token:", AuthService.instance.authToken)
-        print("Name:", userName)
-        print("ID:", id)
-        print("Avatar:", avatar)
-        print("BGColor:", color)
-        
-    }
-    
 }
+
