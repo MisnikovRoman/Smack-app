@@ -17,6 +17,9 @@ class ChannelVC: UIViewController {
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // ⚠️⚠️⚠️ testing - delete after
+        testAutoLogging()
 
         revealViewController().rearViewRevealWidth = view.frame.size.width - 70
         
@@ -69,6 +72,24 @@ class ChannelVC: UIViewController {
     
     // our custom func for exit from 'Create account VC' to this ('Channel VC')
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        
+    }
+    
+    private func testAutoLogging() {
+        
+        let userName = UserDataService.instance.name
+        let _ = UserDataService.instance.email
+        let id = UserDataService.instance.id
+        let avatar = UserDataService.instance.avatarName
+        let color = UserDataService.instance.avatarColor
+        
+        print("🧑🏼USER INFO:")
+        print("Email:", AuthService.instance.userEmail)
+        print("Auth token:", AuthService.instance.authToken)
+        print("Name:", userName)
+        print("ID:", id)
+        print("Avatar:", avatar)
+        print("BGColor:", color)
         
     }
     

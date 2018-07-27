@@ -130,30 +130,15 @@ class AuthService {
             "avatarColor": avatarColor
         ]
         
-        let header = [
-            "Authorization": "Bearer \(AuthService.instance.authToken)",
-            "Content-Type": "application/json; charset=utf-8"
-        ]
-        
-        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 
                 // main code if there is no errors
                 guard let data = response.data else { return }
                 do {
-                    let json = try JSON(data: data)
-                    let id = json["_id"].stringValue
-                    let color = json["avatarColor"].stringValue
-                    let avatarName = json["avatarName"].stringValue
-                    let email = json["email"].stringValue
-                    let name = json["name"].stringValue
-                    
-                    // add to out UserDataService class parameters
-                    UserDataService.instance.setUserDataService(id: id, color: color, avatarName: avatarName, email: email, name: name)
-                    
+                   try self.setUserInfo(data: data)
                     // use our completion handler closure
                     completion(true)
-                
                 } catch _ {
                     print("Error in create user")
                 }
@@ -165,6 +150,44 @@ class AuthService {
         }
     } // end func createUser()
     
+    func findUserByEmail(completion: @escaping CompletionHandler) {
+        
+        Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                
+                // main code if there is no errors
+                guard let data = response.data else { return }
+                do {
+                    // extract and save user data
+                    try self.setUserInfo(data: data)
+                    // use our completion handler closure
+                    completion(true)
+                    
+                } catch {
+                    print("Error in create user")
+                }
+                
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+            
+        } // end alamofire
+        
+    } // end find user by email
     
+    private func setUserInfo(data: Data) throws {
+        
+        let json = try JSON(data: data)
+        let id = json["_id"].stringValue
+        let color = json["avatarColor"].stringValue
+        let avatarName = json["avatarName"].stringValue
+        let email = json["email"].stringValue
+        let name = json["name"].stringValue
+        
+        // add to out UserDataService class parameters
+        UserDataService.instance.setUserDataService(id: id, color: color, avatarName: avatarName, email: email, name: name)
+    }
     
-}
+} // end instance
