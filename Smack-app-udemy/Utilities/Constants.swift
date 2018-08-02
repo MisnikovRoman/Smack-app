@@ -17,6 +17,7 @@ enum AnimationType { case show, hide }
 // URL constants
 // let BASE_URL = "https://chatapp-test.herokuapp.com/v1/"
 let BASE_URL = "http://localhost:3005/v1/"
+let URL_SOCKETIO = "http://localhost:3005/" // ⚠️
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"

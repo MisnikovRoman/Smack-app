@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ChatVC.statusBtnTap(_:):ChatVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SocketService.instance.socket.status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ChannelVC.addChannelBtnTap(_:):ChannelVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SocketService.instance.socket.status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

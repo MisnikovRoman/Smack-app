@@ -12,5 +12,6 @@ target 'Smack-app-udemy' do
   pod 'SwiftyJSON'
   pod 'Socket.IO-Client-Swift'
   pod 'NVActivityIndicatorView'
+  pod 'Socket.IO-Client-Swift'
 
 end

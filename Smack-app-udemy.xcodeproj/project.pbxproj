@@ -20,6 +20,7 @@
 		C8676059206BCCE000256E52 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8676058206BCCE000256E52 /* GradientView.swift */; };
 		C87875252085E1B900634D05 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87875242085E1B900634D05 /* CircleImageView.swift */; };
 		C8883B04206D26ED00933F57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8883B03206D26ED00933F57 /* Constants.swift */; };
+		C88EDE1B210EED4500371734 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDE1A210EED4500371734 /* TestVC.swift */; };
 		C8913E5420764F7A00ACB737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8913E5320764F7900ACB737 /* Assets.xcassets */; };
 		C89D4476206B8010004AD1EF /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4475206B8010004AD1EF /* ChatVC.swift */; };
 		C89D4478206B8022004AD1EF /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D4477206B8022004AD1EF /* ChannelVC.swift */; };
@@ -28,6 +29,7 @@
 		C8B66266210B4751001E96B8 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B66265210B4751001E96B8 /* ChannelCell.swift */; };
 		C8B66269210B7B22001E96B8 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B66267210B7B22001E96B8 /* AddChannelVC.swift */; };
 		C8B6626A210B7B22001E96B8 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B66268210B7B22001E96B8 /* AddChannelVC.xib */; };
+		C8B6626C210B8F1A001E96B8 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B6626B210B8F1A001E96B8 /* SocketService.swift */; };
 		C8BBE8C120877ABA0039B8C3 /* Smack_app_udemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BBE8C020877ABA0039B8C3 /* Smack_app_udemyTests.swift */; };
 		C8BBE8CA208787790039B8C3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BBE8C8208787790039B8C3 /* ProfileVC.swift */; };
 		C8BBE8CB208787790039B8C3 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8BBE8C9208787790039B8C3 /* ProfileVC.xib */; };
@@ -66,6 +68,7 @@
 		C8676058206BCCE000256E52 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C87875242085E1B900634D05 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		C8883B03206D26ED00933F57 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C88EDE1A210EED4500371734 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		C8913E5320764F7900ACB737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C89D4475206B8010004AD1EF /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C89D4477206B8022004AD1EF /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		C8B66265210B4751001E96B8 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		C8B66267210B7B22001E96B8 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		C8B66268210B7B22001E96B8 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		C8B6626B210B8F1A001E96B8 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		C8BBE8BE20877ABA0039B8C3 /* Smack-app-udemyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smack-app-udemyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BBE8C020877ABA0039B8C3 /* Smack_app_udemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smack_app_udemyTests.swift; sourceTree = "<group>"; };
 		C8BBE8C220877ABA0039B8C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				C85A853A207DFC6A00D02E7E /* AuthService.swift */,
 				C84F3360207F5915003739A3 /* UserDataService.swift */,
 				C8B66261210B3598001E96B8 /* MessageService.swift */,
+				C8B6626B210B8F1A001E96B8 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				C8DFFC282084963000D8CC8A /* AvatarPickerVC.swift */,
 				C8BBE8C8208787790039B8C3 /* ProfileVC.swift */,
 				C8B66267210B7B22001E96B8 /* AddChannelVC.swift */,
+				C88EDE1A210EED4500371734 /* TestVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				C820DB06206E2D5200E98F4C /* LoginVC.swift in Sources */,
 				C8676059206BCCE000256E52 /* GradientView.swift in Sources */,
 				C86621F1206B89870011F669 /* SWRevealViewController.m in Sources */,
+				C88EDE1B210EED4500371734 /* TestVC.swift in Sources */,
 				C8FE9F2E20721353003B2C41 /* CreateAccountVC.swift in Sources */,
 				C8B66264210B35CB001E96B8 /* Channnel.swift in Sources */,
 				C84F3341207F3FBE003739A3 /* Alert.swift in Sources */,
@@ -436,6 +443,7 @@
 				C8DFFC2D2084A37600D8CC8A /* AvatarCell.swift in Sources */,
 				C8BBE8CA208787790039B8C3 /* ProfileVC.swift in Sources */,
 				C8883B04206D26ED00933F57 /* Constants.swift in Sources */,
+				C8B6626C210B8F1A001E96B8 /* SocketService.swift in Sources */,
 				C8B66262210B3598001E96B8 /* MessageService.swift in Sources */,
 				C85A853B207DFC6A00D02E7E /* AuthService.swift in Sources */,
 				C8DFFC292084963000D8CC8A /* AvatarPickerVC.swift in Sources */,

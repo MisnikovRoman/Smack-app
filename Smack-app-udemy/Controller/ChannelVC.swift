@@ -18,17 +18,17 @@ class ChannelVC: UIViewController {
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         revealViewController().rearViewRevealWidth = view.frame.size.width - 70
         
         // add observer to "listen" notification from CreateAccountVC (line: 90)
         NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        SocketService.instance.getChannel { (success) in
+            if success { self.tableView.reloadData() }
+        }
     }
     
-    // handler for our notification
-    @objc func userDataDidChange(_ notif: Notification) {
-        setupUserInfo()
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -96,6 +96,11 @@ class ChannelVC: UIViewController {
         }
     }
     
+    // handler for our notification
+    @objc func userDataDidChange(_ notif: Notification) {
+        setupUserInfo()
+    }
+    
 }
 
 // MARK: - Table View protocols
@@ -121,4 +126,12 @@ extension ChannelVC: UITableViewDataSource {
         return cell
     }
 }
-
+//
+//extension ChannelVC {
+//    private func testUserLoginBtnAppearing() {
+//        let isLoggedIn = AuthService.instance.isLoggedIn
+//        print("------>STATUS<-------")
+//        print("Logged status:", isLoggedIn)
+//        print("Name:", UserDataService.instance.name)
+//    }
+//}

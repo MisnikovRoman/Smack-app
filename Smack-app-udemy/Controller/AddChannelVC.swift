@@ -10,11 +10,12 @@ import UIKit
 
 class AddChannelVC: UIViewController {
     
-    // Outlets
+    // MARK: - Outlets
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var bgView: UIView!
     
+    // MARK: - VC lifecycle func-s
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -25,6 +26,7 @@ class AddChannelVC: UIViewController {
         animateBGView(type: .show)
     }
     
+    // MARK: - Methods
     // specify name, email and image in VC
     func setupView() {
         // close on transparent BG tap
@@ -59,13 +61,23 @@ class AddChannelVC: UIViewController {
         }
     }
     
-    // Actions
+    // MARK: - Actions
     @IBAction func closeBtnTap(_ sender: UIButton) {
         dismissViewWithAnimation()
     }
     
     @IBAction func createChannelBtnTap(_ sender: UIButton) {
-        // MessageService.instance.addChannel(name: String)
+        // get data from input
+        guard let channelName = titleTextField.text, titleTextField.text != "" else { return }
+        guard let channelDescription = descriptionTextField.text else { return }
+        
+        SocketService.instance.printStatus()
+        
+        SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDescription) { (success) in
+            if success {
+                self.dismissViewWithAnimation()
+            }
+        }
     }
     
 }

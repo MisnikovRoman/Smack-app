@@ -16,7 +16,7 @@ class MessageService {
     
     static let instance = MessageService()
     
-    private(set) public var channels = [Channel]()
+    public var channels = [Channel]()
     
     // func to get channels via API
     func findAllChannels(completion: @escaping CompletionHandler) {
@@ -39,7 +39,7 @@ class MessageService {
                 }
                 
                 // debug print
-                print(self.channels)
+                print("📃 Created channels:", self.channels)
                 // successfully parsed channels
                 completion(true)
                 
